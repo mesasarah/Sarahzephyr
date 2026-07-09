@@ -1,0 +1,214 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sakura: var(--sakura);
+  --color-sakura-soft: var(--sakura-soft);
+  --color-sakura-deep: var(--sakura-deep);
+  --font-display: "Fraunces", "Space Grotesk", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ---------- LIGHT (default) ---------- */
+:root {
+  --radius: 0.875rem;
+  --bg-base: #faf6f4;               /* warm ivory */
+  --bg-elevated: #ffffff;
+  --ink: oklch(0.18 0.02 20);
+  --ink-muted: oklch(0.45 0.02 20);
+
+  --background: oklch(0.98 0.012 20);
+  --foreground: oklch(0.18 0.02 20);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 20);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 20);
+  --primary: oklch(0.65 0.18 5);            /* deep sakura */
+  --primary-foreground: oklch(0.99 0.005 20);
+  --secondary: oklch(0.96 0.02 20);
+  --secondary-foreground: oklch(0.22 0.02 20);
+  --muted: oklch(0.95 0.015 20);
+  --muted-foreground: oklch(0.48 0.02 20);
+  --accent: oklch(0.94 0.03 5);
+  --accent-foreground: oklch(0.22 0.02 20);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.85 0.02 20 / 0.7);
+  --input: oklch(0.9 0.02 20 / 0.6);
+  --ring: oklch(0.65 0.18 5);
+
+  --sakura: #e8869d;
+  --sakura-soft: #ffd7e2;
+  --sakura-deep: #b4436c;
+
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(180, 67, 108, 0.14);
+  --glass-shadow: 0 20px 50px -25px rgba(180, 67, 108, 0.18);
+  --card-shadow: 0 1px 2px rgba(24, 12, 18, 0.04), 0 10px 30px -18px rgba(180, 67, 108, 0.18);
+
+  color-scheme: light;
+}
+
+/* ---------- DARK ---------- */
+.dark {
+  --bg-base: #0b0709;
+  --bg-elevated: #120b10;
+  --background: oklch(0.11 0.012 350);
+  --foreground: oklch(0.97 0.008 350);
+  --card: oklch(0.14 0.014 350);
+  --card-foreground: oklch(0.97 0.008 350);
+  --popover: oklch(0.14 0.014 350);
+  --popover-foreground: oklch(0.97 0.008 350);
+  --primary: oklch(0.78 0.14 5);
+  --primary-foreground: oklch(0.12 0.012 350);
+  --secondary: oklch(0.18 0.02 350);
+  --secondary-foreground: oklch(0.97 0.008 350);
+  --muted: oklch(0.16 0.015 350);
+  --muted-foreground: oklch(0.72 0.02 350);
+  --accent: oklch(0.24 0.05 5);
+  --accent-foreground: oklch(0.97 0.008 350);
+  --border: oklch(0.98 0.01 350 / 0.09);
+  --input: oklch(0.98 0.01 350 / 0.09);
+  --ring: oklch(0.78 0.14 5);
+
+  --sakura: #f2a5b8;
+  --sakura-soft: #ffd7e2;
+  --sakura-deep: #ff8fa8;
+
+  --glass-bg: rgba(255, 255, 255, 0.035);
+  --glass-border: rgba(255, 143, 168, 0.16);
+  --glass-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+  --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 20px 50px -25px rgba(0, 0, 0, 0.6);
+
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    background: var(--bg-base);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--sakura) 40%, transparent);
+    color: var(--foreground);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+}
+
+@utility glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+}
+
+@utility glass-sakura {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--sakura) 12%, transparent),
+    color-mix(in oklch, var(--sakura-soft) 4%, transparent)
+  );
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid color-mix(in oklch, var(--sakura) 30%, transparent);
+  box-shadow: var(--card-shadow);
+}
+
+@utility text-gradient-sakura {
+  background: linear-gradient(120deg, var(--sakura-deep) 0%, var(--sakura) 55%, var(--sakura-soft) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dark .text-gradient-sakura {
+  background: linear-gradient(120deg, #ffd7e2 0%, #f2a5b8 45%, #ff8fa8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility soft-shadow {
+  box-shadow: var(--card-shadow);
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-blink { animation: blink 1s steps(1) infinite; }
+.animate-float-y { animation: float-y 6s ease-in-out infinite; }
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: color-mix(in oklch, var(--sakura) 60%, transparent);
+  border-radius: 10px;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: linear-gradient(90deg, var(--sakura-deep), var(--sakura), var(--sakura-soft));
+  transform-origin: 0 50%; z-index: 90;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
