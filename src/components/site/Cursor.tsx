@@ -12,7 +12,8 @@ export function Cursor() {
 
     let mx = window.innerWidth / 2;
     let my = window.innerHeight / 2;
-    let rx = mx, ry = my;
+    let rx = mx,
+      ry = my;
     let raf = 0;
 
     const onMove = (e: MouseEvent) => {
@@ -24,7 +25,9 @@ export function Cursor() {
     };
     const onOver = (e: MouseEvent) => {
       const t = e.target as HTMLElement | null;
-      const hover = !!t?.closest("a, button, [role=button], input, textarea, [data-cursor='hover']");
+      const hover = !!t?.closest(
+        "a, button, [role=button], input, textarea, [data-cursor='hover']",
+      );
       if (ringRef.current) {
         ringRef.current.dataset.hover = hover ? "true" : "false";
       }

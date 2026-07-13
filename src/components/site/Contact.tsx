@@ -14,7 +14,10 @@ export function Contact() {
     const e: Record<string, string> = {};
     if (!form.name.trim() || form.name.length > 100)
       e.name = "Please add your name (max 100 chars).";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) || form.email.length > 255)
+    if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) ||
+      form.email.length > 255
+    )
       e.email = "Please enter a valid email.";
     if (form.message.trim().length < 10 || form.message.length > 1500)
       e.message = "Message must be 10–1500 characters.";
@@ -58,7 +61,8 @@ export function Contact() {
             Say hi — I read every message.
           </h3>
           <p className="mt-3 text-muted-foreground">
-            Fastest way is email, but LinkedIn works too. Based in {profile.location}, working IST.
+            Fastest way is email, but LinkedIn works too. Based in{" "}
+            {profile.location}, working IST.
           </p>
 
           <div className="mt-6 space-y-3 text-sm">
@@ -213,7 +217,11 @@ function Field({
         <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
           {label}
         </span>
-        {error && <span className="text-[11px] text-[color:var(--sakura-deep)]">{error}</span>}
+        {error && (
+          <span className="text-[11px] text-[color:var(--sakura-deep)]">
+            {error}
+          </span>
+        )}
       </div>
       {children}
     </label>

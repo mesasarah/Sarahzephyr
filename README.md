@@ -8,11 +8,11 @@ A production-ready personal portfolio website built with **TanStack Start**, **R
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
+| Layer     | Technology                                                                 |
+| --------- | -------------------------------------------------------------------------- |
 | Framework | [TanStack Start](https://tanstack.com/start) (SSR/SSG, file-based routing) |
-| UI | React 19, TypeScript |
-| Styling | Tailwind CSS v4, CSS custom properties (theming) |
-| Animation | Framer Motion |
-| Icons | Lucide React |
-| Build | Vite 7 |
+| UI        | React 19, TypeScript                                                       |
+| Styling   | Tailwind CSS v4, CSS custom properties (theming)                           |
+| Animation | Framer Motion                                                              |
+| Icons     | Lucide React                                                               |
+| Build     | Vite 7                                                                     |

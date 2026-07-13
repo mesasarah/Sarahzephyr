@@ -24,7 +24,9 @@ function useTypedRole(roles: readonly string[]) {
     }
     const t = setTimeout(() => {
       setText((prev) =>
-        deleting ? current.slice(0, prev.length - 1) : current.slice(0, prev.length + 1),
+        deleting
+          ? current.slice(0, prev.length - 1)
+          : current.slice(0, prev.length + 1),
       );
     }, delay);
     return () => clearTimeout(t);
@@ -146,7 +148,8 @@ export function Hero() {
               Portfolio · MMXXVI
             </div>
             <div className="mt-6 font-display text-2xl leading-tight text-foreground">
-              “I like turning research prototypes into products people actually use.”
+              “I like turning research prototypes into products people actually
+              use.”
             </div>
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-[color:var(--glass-border)] pt-6">
               <MiniStat k="Latency ↓" v="70%" />
@@ -193,7 +196,9 @@ function SocialIcon({
       aria-label={label}
       className="group grid h-10 w-10 place-items-center rounded-full glass text-foreground/80 transition-all hover:text-foreground hover:border-[color:var(--sakura)]"
     >
-      <span className="transition-transform group-hover:scale-110">{children}</span>
+      <span className="transition-transform group-hover:scale-110">
+        {children}
+      </span>
     </a>
   );
 }

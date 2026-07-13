@@ -52,7 +52,15 @@ export const projects: Project[] = [
     title: "ChessMeet India",
     subtitle: "Live Video Chess Platform",
     period: "May 2026 – Present",
-    stack: ["React", "TypeScript", "Vite", "Socket.IO", "WebRTC", "Express", "Prisma"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Socket.IO",
+      "WebRTC",
+      "Express",
+      "Prisma",
+    ],
     description:
       "Online chess platform with live multiplayer gameplay and peer-to-peer video calling, tailored for the Indian market.",
     highlights: [
@@ -116,7 +124,14 @@ export const projects: Project[] = [
     title: "DOCBOT",
     subtitle: "RAG-Based Document Intelligence Assistant",
     period: "Sep 2023 – Nov 2023",
-    stack: ["LangChain", "ChromaDB", "FastAPI", "React", "PyPDF2", "Tesseract OCR"],
+    stack: [
+      "LangChain",
+      "ChromaDB",
+      "FastAPI",
+      "React",
+      "PyPDF2",
+      "Tesseract OCR",
+    ],
     description:
       "Full-stack RAG assistant helping 100+ users search and understand technical documents — even in air-gapped environments.",
     highlights: [
@@ -166,8 +181,14 @@ export const skills = [
     category: "Languages",
     items: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "C++", "Bash"],
   },
-  { category: "Frontend", items: ["React.js", "Next.js", "HTML", "CSS", "Responsive Design"] },
-  { category: "Backend", items: ["FastAPI", "Flask", "Node.js", "Express", "REST APIs"] },
+  {
+    category: "Frontend",
+    items: ["React.js", "Next.js", "HTML", "CSS", "Responsive Design"],
+  },
+  {
+    category: "Backend",
+    items: ["FastAPI", "Flask", "Node.js", "Express", "REST APIs"],
+  },
   {
     category: "AI & Machine Learning",
     items: [
@@ -182,8 +203,14 @@ export const skills = [
       "Prompt Engineering",
     ],
   },
-  { category: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Neo4j", "ChromaDB"] },
-  { category: "Tools & DevOps", items: ["Docker", "Git", "GitHub", "Linux", "CI/CD", "Jira"] },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Neo4j", "ChromaDB"],
+  },
+  {
+    category: "Tools & DevOps",
+    items: ["Docker", "Git", "GitHub", "Linux", "CI/CD", "Jira"],
+  },
   {
     category: "Core Concepts",
     items: [
@@ -198,8 +225,14 @@ export const skills = [
 
 export const certifications = [
   { name: "CS50's Introduction to Computer Science", org: "HarvardX" },
-  { name: "CS50's Web Programming with Python and JavaScript", org: "HarvardX" },
-  { name: "IBM Full Stack Software Developer Professional Certificate", org: "IBM" },
+  {
+    name: "CS50's Web Programming with Python and JavaScript",
+    org: "HarvardX",
+  },
+  {
+    name: "IBM Full Stack Software Developer Professional Certificate",
+    org: "IBM",
+  },
   { name: "Google Data Analytics Professional Certificate", org: "Google" },
 ] as const;
 
