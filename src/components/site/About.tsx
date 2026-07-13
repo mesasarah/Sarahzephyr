@@ -11,7 +11,9 @@ export function About() {
       title={
         <>
           Software engineer building{" "}
-          <span className="italic text-gradient-sakura">full-stack, backend & AI systems.</span>
+          <span className="italic text-gradient-sakura">
+            full-stack, backend & AI systems.
+          </span>
         </>
       }
     >
@@ -23,13 +25,25 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="glass relative overflow-hidden rounded-2xl p-7 lg:col-span-2"
         >
-          <p className="text-lg leading-relaxed text-foreground/85">{profile.summary}</p>
+          <p className="text-lg leading-relaxed text-foreground/85">
+            {profile.summary}
+          </p>
           <p className="mt-5 text-muted-foreground">
-            Recent work spans building enterprise document-intelligence platforms at TCS,
-            an offline RAG system for DRDO researchers, and shipping personal products like{" "}
-            <span className="text-[color:var(--sakura-deep)] font-medium">Nova</span>,{" "}
-            <span className="text-[color:var(--sakura-deep)] font-medium">GraphMind AI</span> and{" "}
-            <span className="text-[color:var(--sakura-deep)] font-medium">ChessMeet India</span>.
+            Recent work spans building enterprise document-intelligence
+            platforms at TCS, an offline RAG system for DRDO researchers, and
+            shipping personal products like{" "}
+            <span className="text-[color:var(--sakura-deep)] font-medium">
+              Nova
+            </span>
+            ,{" "}
+            <span className="text-[color:var(--sakura-deep)] font-medium">
+              GraphMind AI
+            </span>{" "}
+            and{" "}
+            <span className="text-[color:var(--sakura-deep)] font-medium">
+              ChessMeet India
+            </span>
+            .
           </p>
         </motion.div>
 
@@ -46,11 +60,11 @@ export function About() {
           <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-[color:var(--sakura-deep)]">
             Education
           </div>
-          <h3 className="mt-2 font-display text-xl text-foreground">{education.degree}</h3>
+          <h3 className="mt-2 font-display text-xl text-foreground">
+            {education.degree}
+          </h3>
           <p className="mt-1 text-muted-foreground">{education.school}</p>
-          <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
-
-          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-sm"></div>
           <div className="mt-5 border-t border-[color:var(--glass-border)] pt-4">
             <div className="mb-2 text-[10px] uppercase tracking-widest text-muted-foreground">
               Relevant Coursework
@@ -68,14 +82,25 @@ export function About() {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-        <Highlight icon={<Sparkles className="h-4 w-4" />} title="Full-stack fluent">
+        <Highlight
+          icon={<Sparkles className="h-4 w-4" />}
+          title="Full-stack fluent"
+        >
           React, TypeScript, FastAPI, Python, SQL and Neo4j — schema to UI.
         </Highlight>
-        <Highlight icon={<Rocket className="h-4 w-4" />} title="Production instincts">
-          CI/CD, Docker, 85%+ test coverage, air-gapped deployments, real-time monitoring.
+        <Highlight
+          icon={<Rocket className="h-4 w-4" />}
+          title="Production instincts"
+        >
+          CI/CD, Docker, 85%+ test coverage, air-gapped deployments, real-time
+          monitoring.
         </Highlight>
-        <Highlight icon={<MapPin className="h-4 w-4" />} title="Available worldwide">
-          Remote-first. Open to full-time, contract and interesting collaborations.
+        <Highlight
+          icon={<MapPin className="h-4 w-4" />}
+          title="Available worldwide"
+        >
+          Remote-first. Open to full-time, contract and interesting
+          collaborations.
         </Highlight>
       </div>
     </Section>
@@ -97,7 +122,9 @@ function Highlight({
         {icon}
       </div>
       <div className="font-display text-lg text-foreground">{title}</div>
-      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{children}</p>
+      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+        {children}
+      </p>
     </div>
   );
 }

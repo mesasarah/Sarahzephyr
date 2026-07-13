@@ -12,7 +12,11 @@ export function Experience() {
     <Section
       id="experience"
       eyebrow="02"
-      title={<>Experience<span className="text-gradient-sakura">.</span></>}
+      title={
+        <>
+          Experience<span className="text-gradient-sakura">.</span>
+        </>
+      }
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {experience.map((exp, idx) => (

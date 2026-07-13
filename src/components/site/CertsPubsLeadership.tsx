@@ -72,9 +72,13 @@ export function Publications() {
               <span className="font-mono text-muted-foreground">{p.date}</span>
             </div>
             <h3 className="font-display text-xl text-foreground">{p.title}</h3>
-            <div className="mt-2 text-[color:var(--sakura-deep)]">{p.venue}</div>
+            <div className="mt-2 text-[color:var(--sakura-deep)]">
+              {p.venue}
+            </div>
             <div className="text-sm text-muted-foreground">{p.org}</div>
-            <p className="mt-4 text-sm leading-relaxed text-foreground/80">{p.note}</p>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/80">
+              {p.note}
+            </p>
           </motion.article>
         ))}
       </div>
