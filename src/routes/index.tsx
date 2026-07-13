@@ -28,7 +28,10 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Mesa Sarah Zephyr — AI, ML and full-stack engineer. Building document-intelligence platforms, RAG systems and real-time products with Python, React, FastAPI and LLMs.",
       },
-      { property: "og:title", content: "Mesa Sarah Zephyr — AI Engineer & Full-Stack Developer" },
+      {
+        property: "og:title",
+        content: "Mesa Sarah Zephyr — AI Engineer & Full-Stack Developer",
+      },
       {
         property: "og:description",
         content:
@@ -40,7 +43,8 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: "Mesa Sarah Zephyr — AI Engineer" },
       {
         name: "twitter:description",
-        content: "AI, ML and full-stack engineer. Portfolio, projects, experience and contact.",
+        content:
+          "AI, ML and full-stack engineer. Portfolio, projects, experience and contact.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],
