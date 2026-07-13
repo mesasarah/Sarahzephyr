@@ -4,7 +4,14 @@ import { Section } from "./Section";
 import { projects, type Project } from "@/lib/resume";
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
 
-const FILTERS = ["AI", "Machine Learning", "Full Stack", "React", "FastAPI", "Python"] as const;
+const FILTERS = [
+  "AI",
+  "Machine Learning",
+  "Full Stack",
+  "React",
+  "FastAPI",
+  "Python",
+] as const;
 
 export function Projects() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number] | null>(null);
@@ -21,7 +28,9 @@ export function Projects() {
       title={
         <>
           Projects that went{" "}
-          <span className="italic text-gradient-sakura">from idea to production.</span>
+          <span className="italic text-gradient-sakura">
+            from idea to production.
+          </span>
         </>
       }
       intro="Tap a chip to filter by stack. Every card is a real project — deployed, tested, and used by real people."
@@ -139,11 +148,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       <div className="p-6">
-        <p className="text-sm leading-relaxed text-foreground/80">{project.description}</p>
+        <p className="text-sm leading-relaxed text-foreground/80">
+          {project.description}
+        </p>
 
         <ul className="mt-4 space-y-1.5">
           {project.highlights.map((h) => (
-            <li key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
+            <li
+              key={h}
+              className="flex items-start gap-2 text-sm text-muted-foreground"
+            >
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[color:var(--sakura-deep)]" />
               {h}
             </li>

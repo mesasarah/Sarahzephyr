@@ -26,7 +26,9 @@ export function Skills() {
             className="glass group relative overflow-hidden rounded-2xl p-6 transition-colors hover:border-[color:var(--sakura)]"
           >
             <div className="mb-4 flex items-center justify-between">
-              <h3 className="font-display text-lg text-foreground">{group.category}</h3>
+              <h3 className="font-display text-lg text-foreground">
+                {group.category}
+              </h3>
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70">
                 {String(i + 1).padStart(2, "0")}
               </span>

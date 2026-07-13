@@ -15,11 +15,14 @@ export function BackgroundFX() {
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduced) return;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    let w = 0, h = 0;
+    let w = 0,
+      h = 0;
     const resize = () => {
       w = window.innerWidth;
       h = window.innerHeight;
@@ -33,8 +36,17 @@ export function BackgroundFX() {
     window.addEventListener("resize", resize);
 
     type Petal = {
-      x: number; y: number; s: number; vx: number; vy: number;
-      rot: number; vr: number; sway: number; swaySpeed: number; t: number; hue: number;
+      x: number;
+      y: number;
+      s: number;
+      vx: number;
+      vy: number;
+      rot: number;
+      vr: number;
+      sway: number;
+      swaySpeed: number;
+      t: number;
+      hue: number;
     };
     const isDark = () => document.documentElement.classList.contains("dark");
     const COUNT = window.innerWidth < 640 ? 8 : 14;
@@ -57,7 +69,9 @@ export function BackgroundFX() {
     let last = 0;
     const FRAME_MS = 1000 / 40; // ~40fps cap
     let paused = document.hidden;
-    const onVis = () => { paused = document.hidden; };
+    const onVis = () => {
+      paused = document.hidden;
+    };
     document.addEventListener("visibilitychange", onVis);
 
     const draw = (ts: number) => {
@@ -89,7 +103,14 @@ export function BackgroundFX() {
         ctx.beginPath();
         ctx.moveTo(0, -p.s);
         ctx.bezierCurveTo(p.s * 0.9, -p.s * 0.3, p.s * 0.9, p.s * 0.3, 0, p.s);
-        ctx.bezierCurveTo(-p.s * 0.9, p.s * 0.3, -p.s * 0.9, -p.s * 0.3, 0, -p.s);
+        ctx.bezierCurveTo(
+          -p.s * 0.9,
+          p.s * 0.3,
+          -p.s * 0.9,
+          -p.s * 0.3,
+          0,
+          -p.s,
+        );
         ctx.closePath();
         ctx.fill();
         ctx.restore();
@@ -127,7 +148,8 @@ export function BackgroundFX() {
           backgroundImage:
             "linear-gradient(var(--sakura) 1px, transparent 1px), linear-gradient(90deg, var(--sakura) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
-          maskImage: "radial-gradient(ellipse at center, black 40%, transparent 80%)",
+          maskImage:
+            "radial-gradient(ellipse at center, black 40%, transparent 80%)",
         }}
       />
       <canvas ref={canvasRef} className="absolute inset-0" />
