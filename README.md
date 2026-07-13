@@ -2,7 +2,7 @@
 
 A production-ready personal portfolio website built with **TanStack Start**, **React 19**, **Tailwind CSS v4**, and **Framer Motion**. Designed with a cherry blossom aesthetic, dark/light theme support, and smooth scroll-driven animations.
 
-🔗 **Live:** [https://id-preview--5fad540e-1021-4f6c-afab-c485dd45d771.lovable.app](https://id-preview--5fad540e-1021-4f6c-afab-c485dd45d771.lovable.app)
+🔗 **Live:**
 
 ---
 
