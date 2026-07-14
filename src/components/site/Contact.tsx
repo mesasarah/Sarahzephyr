@@ -105,7 +105,7 @@ export function Contact() {
                 maxLength={100}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="w-full rounded-xl border border-[color:var(--glass-border)] bg-[color:var(--bg-elevated)] px-4 py-3 text-foreground placeholder:text-muted-foreground/60 focus:border-[color:var(--sakura)] focus:outline-none focus:ring-2 focus:ring-[color:color-mix(in_oklch,var(--sakura)_25%,transparent)]"
-                placeholder="Ada Lovelace"
+                placeholder="Your Name"
               />
             </Field>
             <Field label="Email" error={errors.email}>

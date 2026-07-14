@@ -4,15 +4,22 @@ import { Section } from "./Section";
 import { projects, type Project } from "@/lib/resume";
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
 
-const FILTERS = ["AI", "Machine Learning", "Full Stack", "React", "FastAPI", "Python"] as const;
+const FILTERS = ["AI", "Machine Learning", "Full Stack"] as const;
 
 export function Projects() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number] | null>(null);
 
   const filtered = useMemo(() => {
-    const sorted = [...projects].sort((a, b) => b.order - a.order);
-    return filter ? sorted.filter((p) => p.tags.includes(filter)) : sorted;
-  }, [filter]);
+  const sorted = [...projects].sort((a, b) => b.order - a.order);
+
+  // Default homepage: only show top 4 projects
+  if (!filter) {
+    return sorted.slice(0, 4);
+  }
+
+  // When a filter is selected, show every matching project
+  return sorted.filter((p) => p.tags.includes(filter));
+}, [filter]);
 
   return (
     <Section

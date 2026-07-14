@@ -23,8 +23,6 @@ export const profile = {
 export const education = {
   school: "Vellore Institute of Technology, Amaravati",
   degree: "B.Tech in Computer Science Engineering",
-  graduation: "Jan 2026",
-  cgpa: "7.55",
   coursework: [
     "Data Structures & Algorithms",
     "System Design",
@@ -51,7 +49,6 @@ export const projects: Project[] = [
   {
     title: "ChessMeet India",
     subtitle: "Live Video Chess Platform",
-    period: "May 2026 – Present",
     stack: ["React", "TypeScript", "Vite", "Socket.IO", "WebRTC", "Express", "Prisma"],
     description:
       "Online chess platform with live multiplayer gameplay and peer-to-peer video calling, tailored for the Indian market.",
@@ -60,15 +57,14 @@ export const projects: Project[] = [
       "Scalable TypeScript + React 18 + Express architecture designed for future expansion",
       "WebRTC peer-to-peer video communication with safety-first features and dark mode UI",
     ],
-    tags: ["Full Stack", "React", "TypeScript"],
+    tags: ["Full Stack"],
     gradient: "from-[#ff4fa3] via-[#ff7ac6] to-[#7a4bff]",
-    order: 6,
+    order: 97,
   },
   {
     title: "Nova",
     subtitle: "AI Companion Platform",
-    period: "Jan 2026 – March 2026",
-    stack: ["React", "FastAPI", "Python", "Groq API", "Llama 3.3"],
+    stack: ["AI"],
     description:
       "AI companion platform with real-time chat, mood tracking and secure authentication — powered by streaming Llama 3.3 responses.",
     highlights: [
@@ -76,14 +72,13 @@ export const projects: Project[] = [
       "Interactive ocean-themed React interface with persistent user data",
       "Scalable REST APIs optimized for real-time, low-latency communication",
     ],
-    tags: ["AI", "Full Stack", "FastAPI", "Python", "React"],
+    tags: ["AI"],
     gradient: "from-[#ff7ac6] via-[#ff4fa3] to-[#5b8dff]",
-    order: 5,
+    order: 93,
   },
   {
     title: "GraphMind AI",
     subtitle: "Knowledge Graph AI System",
-    period: "Jan 2026 – March 2026",
     stack: ["FastAPI", "React.js", "Neo4j", "LLaMA 3", "LangChain"],
     description:
       "Combines knowledge graphs with LLMs for smarter document search, multi-step reasoning and explainable answers.",
@@ -92,14 +87,13 @@ export const projects: Project[] = [
       "Embeddings-based retrieval with LLM-powered response generation",
       "REST APIs integrating Neo4j graph data with LangChain LLM pipelines",
     ],
-    tags: ["AI", "Machine Learning", "FastAPI", "Python"],
+    tags: ["AI"],
     gradient: "from-[#ff4fa3] via-[#c04bff] to-[#5b8dff]",
-    order: 4,
+    order: 96,
   },
   {
     title: "VisText AI",
     subtitle: "Document Intelligence Platform",
-    period: "Feb 2025 – Apr 2025",
     stack: ["FastAPI", "React.js", "PostgreSQL", "Apache Solr", "Neo4j"],
     description:
       "Enterprise document intelligence platform for processing, extraction and semantic search — deployed with Docker and CI/CD.",
@@ -108,14 +102,13 @@ export const projects: Project[] = [
       "Neo4j knowledge graph storage + Solr semantic search",
       "Served 500+ enterprise users with production system optimization",
     ],
-    tags: ["AI", "Full Stack", "FastAPI", "Python"],
+    tags: ["AI"],
     gradient: "from-[#ff4fa3] via-[#ff7ac6] to-[#ffb3d9]",
-    order: 3,
+    order: 95,
   },
   {
     title: "DOCBOT",
     subtitle: "RAG-Based Document Intelligence Assistant",
-    period: "Sep 2023 – Nov 2023",
     stack: ["LangChain", "ChromaDB", "FastAPI", "React", "PyPDF2", "Tesseract OCR"],
     description:
       "Full-stack RAG assistant helping 100+ users search and understand technical documents — even in air-gapped environments.",
@@ -123,11 +116,131 @@ export const projects: Project[] = [
       "Complete pipeline: PDF → OCR → embeddings → vector retrieval → LLM answer",
       "Boosted OCR accuracy from 60% to 85–90% through preprocessing & chunking",
       "Zero-downtime operation in fully air-gapped, zero-internet environment",
-    ],
-    tags: ["AI", "Machine Learning", "FastAPI", "Python", "React"],
+    ], 
+    tags: ["AI"],
     gradient: "from-[#c04bff] via-[#ff4fa3] to-[#ff7ac6]",
-    order: 2,
+    order: 94,
   },
+  {
+  title: "Atlas AI",
+  subtitle: "Autonomous AI Agent Orchestration Platform",
+
+
+  stack: [
+    "Next.js",
+    "FastAPI",
+    "PostgreSQL",
+    "Docker",
+    "WebSockets",
+    "Llama 3",
+    "Groq",
+  ],
+
+  description:
+    "Enterprise AI agent orchestration platform that transforms natural language goals into executable workflows using dependency graphs, parallel execution and human approvals.",
+
+  highlights: [
+    "Autonomous workflow planning powered by LLMs",
+    "Dependency Graph (DAG) execution with parallel task scheduling",
+    "Human approval checkpoints before high-risk actions",
+    "Real-time execution timeline via WebSockets",
+    "Sandboxed Python execution with retry & recovery",
+  ],
+
+  github: "https://github.com/mesasarah/Atlas",
+
+  demo: "https://atlas.sarahzephyr.com",
+
+  tags: [
+    "AI",
+  ],
+
+  gradient:
+    "from-[#9f7aea] via-[#ff4fa3] to-[#5b8dff]",
+
+  order: 100,
+},
+{
+  title: "LoadGhost",
+  subtitle: "AI Generated Load Testing Platform",
+  
+
+  stack: [
+    "Next.js",
+    "FastAPI",
+    "PostgreSQL",
+    "Redis",
+    "Celery",
+    "Docker",
+    "Python",
+  ],
+
+  description:
+    "AI-powered load testing platform that converts real production traffic into executable performance tests with intelligent user journey discovery.",
+
+  highlights: [
+    "Automatic user journey discovery from traffic logs",
+    "Generates k6, Locust, JMeter and Artillery scripts",
+    "Interactive flow visualization and AI performance insights",
+    "Background task processing using Celery and Redis",
+    "Supports Nginx, HAR, GA, Mixpanel and OpenTelemetry",
+  ],
+
+  github:
+    "https://github.com/mesasarah/LOADGhost",
+
+  demo:
+    "https://loadghost.sarahzephyr.com",
+
+  tags: [
+    "AI",
+    "Full Stack",
+  ],
+
+  gradient:
+    "from-[#5b8dff] via-[#7a4bff] to-[#ff4fa3]",
+
+  order: 99,
+},
+{
+  title: "Magenta Mind",
+  subtitle: "Enterprise Multimodal RAG Platform",
+  
+
+  stack: [
+    "React",
+    "TypeScript",
+    "PostgreSQL",
+    "pgvector",
+    "OpenAI",
+    "TanStack",
+  ],
+
+  description:
+    "Enterprise multimodal Retrieval-Augmented Generation platform supporting intelligent search across documents, videos and audio with grounded AI responses.",
+
+  highlights: [
+    "Multimodal RAG over documents, audio and video",
+    "Semantic vector search using pgvector",
+    "Timestamped AI citations with contextual evidence",
+    "OCR, transcription and embedding pipelines",
+    "Enterprise-ready scalable architecture",
+  ],
+
+  github:
+    "https://github.com/mesasarah/Magenta",
+
+  demo: "",
+
+  tags: [
+    "Full Stack",
+  ],
+
+  gradient:
+    "from-[#ff4fa3] via-[#c04bff] to-[#5b8dff]",
+
+  order: 98,
+},
 ];
 
 export const experience = [

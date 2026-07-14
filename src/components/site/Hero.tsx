@@ -5,6 +5,10 @@ import { MagneticButton } from "./MagneticButton";
 import { SakuraBranch } from "./BackgroundFX";
 import { Github, Linkedin, Mail, ArrowRight, Download } from "lucide-react";
 
+import { TbWorld } from "react-icons/tb";
+import { SiLeetcode } from "react-icons/si";
+import { HiOutlineIdentification } from "react-icons/hi2";
+
 function useTypedRole(roles: readonly string[]) {
   const [idx, setIdx] = useState(0);
   const [text, setText] = useState("");
@@ -57,7 +61,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs uppercase tracking-[0.22em] text-muted-foreground"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--sakura-deep)]" />
-            Open to opportunities · {profile.location}
+            Open to opportunities 
           </motion.div>
 
           <motion.h1
@@ -66,7 +70,7 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="font-display text-5xl leading-[1.02] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-[5.25rem]"
           >
-            <span className="block">Sarah Zephyr</span>
+            <span className="block">Mesa Sarah</span>
             <span className="block italic text-gradient-sakura">Zephyr.</span>
           </motion.h1>
 
@@ -103,7 +107,7 @@ export function Hero() {
               Contact Me <Mail className="h-4 w-4" />
             </MagneticButton>
             <MagneticButton
-              href="/resume.pdf"
+              href="/Sarah SDE.pdf"
               variant="ghost"
               download
               ariaLabel="Download resume PDF"
@@ -113,24 +117,44 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="mt-10 flex items-center gap-3"
-          >
-            <SocialIcon href={profile.github} label="GitHub">
-              <Github className="h-4 w-4" />
-            </SocialIcon>
-            <SocialIcon href={profile.linkedin} label="LinkedIn">
-              <Linkedin className="h-4 w-4" />
-            </SocialIcon>
-            <SocialIcon href={`mailto:${profile.email}`} label="Email">
-              <Mail className="h-4 w-4" />
-            </SocialIcon>
-            <span className="ml-3 hidden font-mono text-xs text-muted-foreground sm:inline">
-              {profile.email}
-            </span>
-          </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.7 }}
+  className="mt-10 flex flex-wrap items-center gap-3"
+>
+  <SocialIcon href={profile.github} label="GitHub">
+    <Github className="h-4 w-4" />
+  </SocialIcon>
+
+  <SocialIcon href={profile.linkedin} label="LinkedIn">
+    <Linkedin className="h-4 w-4" />
+  </SocialIcon>
+
+  <SocialIcon href={`mailto:${profile.email}`} label="Email">
+    <Mail className="h-4 w-4" />
+  </SocialIcon>
+
+  <SocialIcon
+    href="https://own.page/sarahzephyr"
+    label="OwnPage"
+  >
+    <TbWorld className="h-4 w-4" />
+  </SocialIcon>
+
+  <SocialIcon
+    href="https://leetcode.com/u/Vzx2Z2nqrg/"
+    label="LeetCode"
+  >
+    <SiLeetcode className="h-4 w-4" />
+  </SocialIcon>
+
+  <SocialIcon
+    href="https://codolio.com/profile/sarahzephyr"
+    label="Codolio"
+  >
+    <HiOutlineIdentification className="h-4 w-4" />
+  </SocialIcon>
+</motion.div>
         </div>
 
         {/* Editorial "card" — no orbit spinner, professional */}
